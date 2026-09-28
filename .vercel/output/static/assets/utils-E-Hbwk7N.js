@@ -1,0 +1,1 @@
+function e(){return`${Date.now().toString(36)}-${Math.random().toString(36).slice(2,8)}`}async function t(e){try{return await navigator.clipboard.writeText(e),!0}catch{return!1}}export{e as n,t};

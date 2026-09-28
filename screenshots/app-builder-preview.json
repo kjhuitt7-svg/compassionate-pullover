@@ -1,0 +1,36 @@
+{
+  "url": "http://127.0.0.1:8080/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Pullover — what they said, before you forget",
+      "hasCanvas": false,
+      "bodyTextLen": 643,
+      "bodyTextHash": "1a4f9d1441472c8e32dc8e442685070c82ebf5916a65e2c8f9526cd10bf027a6",
+      "bodyTextPrefix": "On the drive home Pullover For Mom. Say what you remember, then ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Pullover — what they said, before you forget",
+      "hasCanvas": false,
+      "bodyTextLen": 643,
+      "bodyTextHash": "1a4f9d1441472c8e32dc8e442685070c82ebf5916a65e2c8f9526cd10bf027a6",
+      "bodyTextPrefix": "On the drive home Pullover For Mom. Say what you remember, then ",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-preview-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-preview.json"
+}

@@ -1,0 +1,208 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f3f7fb;
+  --color-card: #ffffff;
+  --color-sky: #d7eefc;
+  --color-mist: #e3ebf4;
+  --color-ink: #000000;
+  --color-ink-fg: #000000;
+  --color-muted: #000000;
+  --color-line: #d2dde8;
+  --color-primary: #72243a;
+  --color-primary-fg: #ffe14d;
+  --color-accent: #ffe14d;
+  --font-sans: "Outfit", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Fraunces", ui-serif, Georgia, serif;
+  --radius-sm: 0.5rem;
+  --radius-md: 0.85rem;
+  --radius-lg: 1.35rem;
+  --shadow-card: 0 0 0 1px rgba(20, 32, 51, 0.06), 0 16px 40px -28px rgba(20, 32, 51, 0.28);
+}
+
+@layer base {
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+
+  html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body,
+  button,
+  input,
+  textarea,
+  select {
+    background: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    -webkit-text-stroke: 1.6px #ffe14d;
+    paint-order: stroke fill;
+  }
+
+  h1,
+  h2,
+  h3 {
+    text-wrap: balance;
+    font-family: var(--font-display);
+    font-weight: 800;
+    -webkit-text-stroke: 2px #ffe14d;
+    paint-order: stroke fill;
+  }
+
+  a {
+    color: #000000;
+  }
+
+  ::selection {
+    background: color-mix(in srgb, var(--color-accent) 22%, white);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}
+
+.bottom-half a {
+  color: var(--color-accent);
+}
+
+.text-accent,
+.text-primary-fg,
+.bottom-half a {
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  -webkit-text-stroke: 1.25px #000;
+  paint-order: stroke fill;
+}
+
+.text-accent svg {
+  filter: drop-shadow(0.6px 0 0 #000) drop-shadow(-0.6px 0 0 #000) drop-shadow(0 0.6px 0 #000) drop-shadow(0 -0.6px 0 #000);
+}
+
+button,
+a.btn,
+a.bg-primary,
+a[aria-label="Settings"],
+a[aria-label="Back"] {
+  background-color: var(--color-primary);
+  color: var(--color-primary-fg);
+  box-shadow: 0 0 0 2px #000;
+  -webkit-text-stroke: 1.25px #000;
+  paint-order: stroke fill;
+}
+
+.btn {
+  display: inline-flex;
+  min-height: 3.5rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-md);
+  background: var(--color-primary);
+  padding: 0 1.25rem;
+  color: var(--color-primary-fg);
+  font-size: 1.125rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
+  -webkit-text-stroke: 1.25px #000;
+  paint-order: stroke fill;
+}
+
+.ekg-top {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-sky);
+}
+
+.ekg-top::before {
+  content: "";
+  position: absolute;
+  inset: -55%;
+  background-image: url("/ekg.svg?v=5");
+  background-repeat: repeat;
+  background-size: 220px 40px;
+  transform: rotate(-28deg);
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.ekg-top > * {
+  position: relative;
+  z-index: 1;
+}
+
+.scope-bg {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--color-sky);
+}
+
+.scope-bg::before {
+  content: "";
+  position: absolute;
+  inset: -50%;
+  background-image: url("/stethoscope.svg?v=4");
+  background-repeat: repeat;
+  background-size: 180px 132px;
+  transform: rotate(-28deg);
+  opacity: 0.1;
+  pointer-events: none;
+}
+
+.scope-bg > * {
+  position: relative;
+  z-index: 1;
+}
+
+.pullover-title {
+  color: #000;
+  letter-spacing: 0.12em;
+  -webkit-text-stroke: 3px #ffe14d;
+  paint-order: stroke fill;
+}
+
+.mic-live {
+  position: relative;
+}
+
+.mic-live::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: inherit;
+  border: 2px solid var(--color-accent);
+  animation: mic-ring 1.4s ease-out infinite;
+  pointer-events: none;
+}
+
+@keyframes mic-ring {
+  from {
+    transform: scale(1);
+    opacity: 0.55;
+  }
+  to {
+    transform: scale(1.22);
+    opacity: 0;
+  }
+}
+
+.dock {
+  padding-bottom: calc(0.75rem + env(safe-area-inset-bottom));
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

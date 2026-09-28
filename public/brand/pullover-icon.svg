@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="512" height="512" role="img" aria-label="Pullover">
+<title>Pullover</title>
+<g id="mark">
+  <rect width="32" height="32" rx="7" fill="#1C1712"/>
+  <path fill="#C4512C" d="M4.5 13.2h23v5.6H21.2V26H10.8V18.8H4.5z"/>
+  <path fill="#1C1712" d="M13.2 13.2h5.6v2.7c0 1.15-1.25 2.05-2.8 2.05s-2.8-.9-2.8-2.05z"/>
+</g>
+</svg>
